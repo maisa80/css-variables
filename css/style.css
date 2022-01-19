@@ -1,0 +1,134 @@
+@import "variables.css";
+
+* {
+    /*
+        Makes padding and border included in the total width/height,
+        Default behavior adds padding and border to the total width/height
+    */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--header-text-color);
+}
+
+p {
+    color: var(--main-text-color);
+}
+
+a {
+    color: var(--link-text-color);
+}
+
+#container {
+    width: 960px;
+    margin: var(--main-margin) auto;
+}
+
+#header {
+    height: 100px;
+    padding: 10px var(--main-padding);
+    margin-bottom: var(--main-margin);
+    border-top: var(--border-width) solid var(--border-color);
+    border-bottom: var(--border-width) solid var(--border-color);
+}
+
+#sidebar {
+    float: left;
+    height: 300px;
+    width: 160px;
+    margin-right: var(--main-margin);
+    border-right: var(--border-width) dotted var(--border-color);
+    padding: var(--main-padding);
+}
+
+#main-content {
+    float: left;
+    height: 300px;
+    width: calc(800px - var(--main-margin)); /* 800px - 30px = 770px */
+    padding: var(--main-padding);
+}
+
+#footer {
+    background-color: var(--main-bg-color);
+    height: 100px;
+    margin-top: var(--main-margin);
+    color: var(--secondary-text-color);
+    padding: var(--main-padding);
+}
+
+
+/**
+* Navigation
+*/
+
+#main-nav ul,
+#sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: var(--main-margin);
+}
+
+#main-nav ul li a,
+#sidebar-nav ul li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#main-nav ul li a:hover,
+#sidebar-nav ul li a:hover {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-text-color);;
+}
+
+#main-nav > ul > li {
+    float: left;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 15px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.active {
+    background-color: var(--main-bg-color);
+    color: var(--secondary-text-color);
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+} 
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}

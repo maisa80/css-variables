@@ -1,0 +1,20 @@
+:root {
+    /*  Spacing */
+    --main-margin: 20px; 
+    --main-padding: 20px;
+    
+    /* Background colors */
+    --body-bg-color: beige;
+    --main-bg-color: rgb(100, 18, 7);
+    --secondary-bg-color: rgb(129, 129, 129); 
+
+    /* Text colors */
+    --main-text-color: #555;
+    --secondary-text-color: white;
+    --header-text-color: rgb(107, 0, 0);
+    --link-text-color: #222;
+
+    /* Borders */
+    --border-color: rgb(185, 129, 0);
+    --border-width: 2px;
+}
